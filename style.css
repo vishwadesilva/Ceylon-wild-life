@@ -68,14 +68,12 @@ nav {
     flex-wrap: wrap;
 }
 .nav-links ul{
-
-
     align-items: center;
     font-size: 15px;
 }
 
 .nav-links li {
-    padding-right: 50px;
+    padding-right: 70px;
 
 }
 
@@ -120,7 +118,7 @@ nav {
 .drop-down {
     display: none;
     position: absolute;
-    background-color: rgb(44, 44, 44);
+    background-color: black;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 9px;
@@ -150,7 +148,7 @@ nav {
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
     header {
-        padding: 20px; 
+        padding: 15px; 
     }
 
     .nav-links {
@@ -158,12 +156,21 @@ nav {
         flex-direction: column;
         position: relative;
         width: 60%;
-        background-color: #333;
+        background-color:black;
+    }
+    .logo{
+        display: none;
     }
 
-    .nav-links.show, .drop-down {
+    .nav-links.show {
         display: flex;
     }
+
+    .drop-down{
+        display: none;
+    }
+
+
 
     .nav-links li {
         margin: 0;
@@ -1138,10 +1145,10 @@ td, tr, td, th{
         flex-direction: column;
         position: relative;
         width: 100%;
-        background-color: #333;
+        background-color: #000000;
     }
 
-    .nav-links.show, .drop-down {
+    .nav-links.show {
         display: flex;
     }
 
