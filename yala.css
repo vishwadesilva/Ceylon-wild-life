@@ -151,18 +151,18 @@ nav {
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
     header {
-        padding: 20px; 
+        padding: 10px;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         position: relative;
-        width: 60%;
-        background-color: #333;
+        width: 100%;
+        background-color: #000000;
     }
 
-    .nav-links.show, .drop-down {
+    .nav-links.show {
         display: flex;
     }
 
