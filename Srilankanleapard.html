@@ -206,7 +206,16 @@
             navLinks.classList.toggle('show');
         }
     </script>
+<div class="newslettercontainer">
 
+            <h2 id="newltr-hd">Subscribe to Our Newsletter</h2>
+        
+              <form x-data="newsletterForm()" x-on:submit.prevent="subscribe">
+                <input type="text" placeholder="Enter Email address" x-model="email" required>
+                <input type="submit" value="Subscribe">
+              </form>
+        
+          </div>
 
  
 
