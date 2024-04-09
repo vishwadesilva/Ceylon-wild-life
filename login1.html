@@ -46,14 +46,20 @@
             $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const signInForm = document.querySelector('.login-form');
-            signInForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                const username = signInForm.querySelector('#username').value;
-                const password = signInForm.querySelector('#password').value;
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const signInForm = document.querySelector('.login-form');
+        signInForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = signInForm.querySelector('#username').value;
+            const password = signInForm.querySelector('#password').value;
 
+            // Check if the entered credentials match the admin's credentials
+            if (username === "vishwaadmin" && password === "dieaking") {
+                // Redirect admin to newslettersave.html
+                window.location.href = 'newslettersave.html';
+                alert(' Admin has Logged in successful!');
+            } else {
                 // Hardcoded user data
                 const hardcodedUsers = [
                     {
@@ -85,9 +91,11 @@
                 } else {
                     alert('Invalid username or password');
                 }
-            });
+            }
         });
-    </script>
+    });
+</script>
+
 
     <footer>
         <section class="footer-section">

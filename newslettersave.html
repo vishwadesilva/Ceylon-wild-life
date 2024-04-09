@@ -1,19 +1,30 @@
+<!-- credentials.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsletter subscriptions</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/Wildlife.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/Wildlife.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
 </head>
+<body>
 
-<body >
+  <div class="container">
+    <h2>Subscribers List</h2>
     
-    <h2>Subscribed Email Addresses</h2>
-    <button id="redirect-btn"> Back to Login</button>
-    <ul id="subscribedEmailList"></ul>
+    <ul id="subscriberList"></ul>
+  </div>
 
-    <script src="script.js"></script>
+  <script>
+    // Retrieve subscribers from localStorage and display them
+    var subscribers = JSON.parse(localStorage.getItem('subscriptions')) || [];
+    var subscriberList = document.getElementById('subscriberList');
+    subscribers.forEach(function(subscriber) {
+      var listItem = document.createElement('li');
+      listItem.textContent = subscriber.email;
+      subscriberList.appendChild(listItem);
+    });
+  </script>
+
 </body>
 </html>
