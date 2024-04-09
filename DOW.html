@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEYLON WILDLIFE</title>
+    <title>new semester</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Wildlife.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/Wildlife.png">
@@ -17,7 +17,6 @@
             <img src="images/Wildlife__1_-removebg-preview.png" alt="Wildlife Logo" width="50">
         </section>
         <nav>
-            <section class="menu-btn" onclick="toggleNav()">&#9776;</section>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#aboutus">About us</a></li>
@@ -32,10 +31,11 @@
                         </ul>
                 </li>
                 <li><a href="Srilankanleapard.html">Sri Lankan Leopard</a></li>
-                <li><a href="contactus.html" class="contactusbuttonnavbar">Contact us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="login1.html" class="contactusbuttonnavbar">Login / Register</a></li>
             </ul>
         
-
+            <section class="menu-btn" onclick="toggleNav()">&#9776;</section>
         </nav>
        
     </header>
@@ -44,7 +44,7 @@
     <!---dow back image--->
     <section class="mainimage">
         <img src="images/peocock.jpg" alt="peocock" class="dowback">
-        <h1 class="centereddowpage">DEPARTMENT OF WILDLIFE CONSERVATION</h1>
+        <h1 id="pagetitle1" class="centereddowpage" contenteditable="true"></h1>
     </section>
     
     <!-- Rest of your content goes here -->
@@ -59,21 +59,12 @@
     <!------dow about us-->
     <section class="flextextdow">
         <section class="secondparadow">
-            <P><span class="topic2home"><b>I</b></span>  What is the DEPARTMENT OF WILDLIFE CONSERVATION?</P>
+            <P id="title2" contenteditable="true"><span class="topic2home"><b>I</b></span>  </P>
         </section>
         <section class="abouttextparadow">
-            <p>The Department of Wildlife Conservation in Sri Lanka is a government agency dedicated to the preservation and
-                 sustainable management of the country's sectionerse and unique wildlife. Established in 1949, its primary objective is
-                  to safeguard the rich biosectionersity and natural habitats found within Sri Lanka. The department is responsible for the
-                   administration and enforcement of wildlife-related laws, the establishment and management of national parks, wildlife 
-                   sanctuaries, and conservation reserves. It plays a crucial role in the conservation of endangered species, habitat restoration, 
-                   and fostering public awareness about the importance of wildlife conservation. The department also engages in research
-                   activities to better understand the ecological balance and promote conservation strategies. Through its efforts, the
-                    Department of Wildlife Conservation strives to ensure the long-term survival of Sri Lanka's sectionerse flora and fauna for 
-                    future generations.</p>
+            <p id="aboutparadescription" contenteditable="true"></p>
         </section>
     </section>
-
 
     <section class="sec2-image-container">
 
@@ -102,8 +93,10 @@
         
     </section>
 
+
+
     <section class="secondparahome">
-        <P><span class="topic2home"><b>I</b></span>  Our Location</P>
+        <P id="title3"><span class="topic2home"><b>I</b></span>  </P>
     </section>
     <section class="flextextdow">
 
@@ -111,12 +104,9 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.945747289865!2d79.91723077483522!3d6.897092693102089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1705319335737!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-        <section class="map-text">
-            
-            Welcome to the Department of Wildlife Conservation Sri Lanka,
-            your gateway to discovering our strategic presence in safeguarding the
-            nation's rich biosectionersity. Our main office, situated at Battaramulla,
-            serves as the hub for our dedicated efforts in wildlife preservation and sustainable management.
+
+        <section id="maptextpara" class="map-text">
+
         </section>
 
         </section>
@@ -128,53 +118,79 @@
             <section class="footerlogo">
                 <img src="images/Wildlife__1_-removebg-preview.png" alt="Wildlife Logo" style="max-width: 100%;">
             </section>
-          <p>At Ceylon Wildlife, our mission is to conserve and protect the diverse wildlife of Sri Lanka, including the iconic Sri Lankan leopard, facing threats from habitat loss and human-wildlife conflict. Through collaboration with communities and conservation partners, we work towards a harmonious balance between human activities and preserving the island's natural heritage. Join us in securing a sustainable future for Sri Lanka's wildlife.</p>
+          <p id="footerpara" contenteditable="true"></p>
         </section>
         <section class="footer-section">
                 
-            <ul style="list-style: none; padding: 0;">
-              <li><a href="index.html">Home</a></li>
-              <br>
-              <br>
-              <li><a href="index.html#aboutus">About us</a></li>
-              <br>
-              <br>
-              <li><a href="introduction.html">Introduction</a></li>
-              <br>
-              <br>
-              <li><a href="DOW.html">DOWC</a></li>
-              <br>
-              <br>
-              <li><a href="srilankananimals.html">Sri Lankan Animals</a></li>
-              <br>
-              <br>
-              <li><a href="yala.html">YALA park</a></li>
-              <br>
-              <br>
-              <li><a href="wilpaththu.html">Wilpaththu park</a></li>
-              <br>
-              <br>
-              <li><a href="gallery.html">Animal Gallery</a></li>
-              <br>
-              <br>
-              <li><a href="srilankanleapard.html">Sri Lankan Leopard</a></li>
-              <br>
-              <br>
-              <li><a href="contactus.html">Contact us</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <br>
+                <br>
+                <li><a href="index.html#aboutus">About us</a></li>
+                <br>
+                <br>
+                <li><a href="introduction.html">Introduction</a></li>
+                <br>
+                <br>
+                <li><a href="login1.html">Login</a></li>
             </ul>
           </section>
+
         
         <section class="footer-section">
-            <p>Contact Us:</p>
-            <p>Email: Ceylonwildlife@gmail.com</p>
-            <p>Phone: 077 123 4567</p>
+            <p id="contactus1"></p>
+            <p id="contactus2"></p>
+            <p id="contactus3"></p>
         </section>
+
+
+
+        <div class="newslettercontainer">
+
+            <h2 id="newltr-hd">Subscribe to Our Newsletter</h2>
+        
+              <form x-data="newsletterForm()" x-on:submit.prevent="subscribe">
+                <input type="text" placeholder="Enter Email address" x-model="email" required>
+                <input type="submit" value="Subscribe">
+              </form>
+        
+          </div>
+
+        <script>
+           fetch('dow.json')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('pagetitle1').textContent = data.pagetitle1;
+        document.getElementById('aboutparadescription').textContent = data.aboutparadescription;
+        document.getElementById('title2').textContent = data.title2;
+        document.getElementById('title3').textContent = data.title3;
+        document.getElementById('maptextpara').textContent = data.maptextpara;
+        document.getElementById('footerpara').textContent = data.footerpara;
+        document.getElementById('contactus1').textContent = data.contactus1;
+        document.getElementById('contactus2').textContent = data.contactus2;
+        document.getElementById('contactus3').textContent = data.contactus3;
+
+        // Storing data in local storage
+        localStorage.setItem('pagetitle1', data.pagetitle1);
+        localStorage.setItem('aboutparadescription', data.aboutparadescription);
+        localStorage.setItem('title2', data.title2);
+        localStorage.setItem('title3', data.title3);
+        localStorage.setItem('maptextpara', data.maptextpara);
+        localStorage.setItem('footerpara', data.footerpara);
+        localStorage.setItem('contactus1', data.contactus1);
+        localStorage.setItem('contactus2', data.contactus2);
+        localStorage.setItem('contactus3', data.contactus3);
+    })
+    .catch(error => console.error('Error fetching:', error));
+
+    
+        </script>
     
         
     </footer>
 
-
-
+    <script src="./script.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 </html>
 

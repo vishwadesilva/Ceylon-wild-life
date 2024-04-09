@@ -61,6 +61,65 @@ nav {
     background-color: #fff;
 }
 
+
+/*************************************FOOTERRR*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+  
+  }
+
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  .footerlogo {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    width: 25%;
+  }
+
+  .footerlogo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    margin-left: 120%;
+    height: auto;
+  }
+ 
+  @media (max-width: 600px) {
+    footer {
+      flex-direction: column;
+    }
+
+    .footer-section {
+      flex: auto;
+      margin: 10px 0;
+    }
+    
+  } 
 /*dropdown*/
 
 .nav-links {
@@ -153,20 +212,19 @@ nav {
 
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
-
-     header {
-        padding: 10px;
+    header {
+        padding: 20px; 
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         position: relative;
-        width: 100%;
-        background-color: #000000;
+        width: 60%;
+        background-color: #333;
     }
 
-    .nav-links.show {
+    .nav-links.show, .drop-down {
         display: flex;
     }
 

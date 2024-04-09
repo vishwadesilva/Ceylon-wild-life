@@ -346,7 +346,14 @@ body {
 
 
 
+.animalscorrection{
+    font-size: 17px;
+    color: #070707;
+    margin-bottom: 8px; 
+    max-width: 600px;
+    padding: 2%;
 
+}
 /********************************* about us text*/
 .abouttextheading{
     width: 100%;
@@ -1270,3 +1277,4 @@ td, tr, td, th{
         font-size: 7px;
     }
 }
+

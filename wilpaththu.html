@@ -17,6 +17,7 @@
         <nav>
             <section class="menu-btn" onclick="toggleNav()">&#9776;</section>
             <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#aboutus">About us</a></li>
                 <li><a href="introduction.html">Introduction</a></li>
@@ -30,10 +31,11 @@
                         </ul>
                 </li>
                 <li><a href="Srilankanleapard.html">Sri Lankan Leopard</a></li>
-                <li><a href="contactus.html" class="contactusbuttonnavbar">Contact us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+                <li><a href="login1.html" class="contactusbuttonnavbar">Login / Register</a></li>
             </ul>
         
-            
+
         </nav>
        
     </header>
@@ -53,17 +55,15 @@
     </section>
   </section>
 
-        <!-- Rest of your content goes here -->
-    
-    <script>
-        function toggleNav() {
-            var navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('show');
-        }
-    </script>
+
+  <script>
+    function toggleNav() {
+        var navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+  </script>
+
 </body>
-
-
 
 <!-- descriptionnnn-->
 
@@ -72,21 +72,17 @@
 <!--section 2-->
 <section id="animals" class="animal-section">
     <section class="animal-text">
-        <h2>Yala is Home</h2>
+        <h2>Wilpattu is Home</h2>
         <br>
-        <h4>Yala National Park, situated in Sri Lanka, is a haven for wildlife enthusiasts, boasting a diverse array of fauna within its diverse ecosystems. The park is renowned for its rich biodiversity, with a variety of animals that captivate visitors from around the world. <br><br><br>
-
-        Among the many animals found in Yala, you can encounter majestic elephants, elusive leopards, and an abundance of deer species, including spotted deer and sambar deer. The park is also home to wild boars, water buffaloes, and a myriad of bird species, making it a paradise for birdwatchers. Marsh crocodiles and various species of lizards add to the reptilian diversity. <br><br><br>
-
-        The coastal boundaries of Yala National Park provide a habitat for marine life, including sea turtles that nest along the beaches. Overall, Yala stands as a testament to the rich tapestry of life, where visitors can witness the coexistence of numerous species in a unique and thriving ecosystem.</h4>
+        <h4 id="wilpaththuintro" contenteditable="true"></h4>
     </section>
     <section class="container2">
         <section class="animal-image">
-            <img src="./images/wilpattu3.jpg" alt="Animals Image">
+            <img src="./images/1.jpg" alt="Animals Image">
         </section>
         <section class="overlay2">
-            <section class="text2">
-                Spotted deer in Wilpattu: Social herds, iconic spots. Graceful grazers adding charm to the vibrant wildlife tapestry. 🦌🌿 #WilpattuWildlife
+            <section class="text2" id= "imageoverlay">
+               
             </section>
         </section>
     </section>
@@ -116,23 +112,23 @@
         <section class="grid-item">
             <img src="./images/birdy.jpg" alt="Photo 1">
             <section class="overlay-text">Photography</section>
-            <h4>Capture the beauty of Wilpattu's flora and fauna through photography.</h4>
+            <h4 id="photo1info" contenteditable="true"></h4>
         </section>
         <section class="grid-item">
             <img src="./images/road.jpg" alt="Photo 2">
             <section class="overlay-text">Nature Trails</section>
-            <h4>Explore designated nature trails that allow you to appreciate the smaller details of the park's ecosystem.</h4>
+            <h4 id="photo2info" contenteditable="true"></h4>
         </section>
         <!-- Add more grid items as needed -->
         <section class="grid-item">
             <img src="./images/elephonte.jpg" alt="Photo 3">
             <section class="overlay-text">Educational Programs</section>
-            <h4>Participate in educational programs organized by the park authorities to learn more about the wildlife and conservation efforts in Wilpattu.</h4>
+            <h4 id="photo3info" contenteditable="true"></h4>
         </section>
         <section class="grid-item">
             <img src="./images/bird.jpg" alt="Photo 4">
             <section class="overlay-text">Conservation and Research Tours:</section>
-            <h4>Learn about ongoing initiatives to protect and preserve the biodiversity of Wilpattu.</h4>
+            <h4 id="photo4info" contenteditable="true"></h4>
         </section>
         <!-- Add more grid items as needed -->
     </section>
@@ -140,65 +136,34 @@
 
 
 
-<!--contacttt-->
-<br><br>
-<br>
-<br>
+    <script>
+        fetch('wilpaththu.json')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('wilpaththuintro').textContent = data['wilpaththuintro'];
+        document.getElementById('imageoverlay').textContent = data['imageoverlay'];
+        document.getElementById('photo1info').textContent = data['photo1info'];
+        document.getElementById('photo2info').textContent = data['photo2info'];
+        document.getElementById('photo3info').textContent = data['photo3info'];
+        document.getElementById('photo4info').textContent = data['photo4info'];
 
+        // Optionally, you can store this data in local storage
+        localStorage.setItem('wilpaththuintro', data['wilpaththuintro']);
+        localStorage.setItem('imageoverlay', data['imageoverlay']);
+        localStorage.setItem('photo1info', data['photo1info']);
+        localStorage.setItem('photo2info', data['photo2info']);
+        localStorage.setItem('photo3info', data['photo3info']);
+        localStorage.setItem('photo4info', data['photo4info']);
+    })
+    .catch(error => console.error('Error fetching:', error));
 
-<!--FOOETRRR-->
-<footer>
-    <section class="footer-section">
-        <section class="footerlogo">
-            <img src="./images/Wildlife__1_-removebg-preview.png" alt="Wildlife Logo" style="max-width: 100%;">
-        </section>
-      <h7>At Ceylon Wildlife, our mission is to conserve and protect the diverse wildlife of Sri Lanka, including the iconic Sri Lankan leopard, facing threats from habitat loss and human-wildlife conflict. Through collaboration with communities and conservation partners, we work towards a harmonious balance between human activities and preserving the island's natural heritage. Join us in securing a sustainable future for Sri Lanka's wildlife.</h7>
-    </section>
-    <section class="footer-section">
-            
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="index.html">Home</a></li>
-          <br>
-          <br>
-          <li><a href="index.html#aboutus">About us</a></li>
-          <br>
-          <br>
-          <li><a href="introduction.html">Introduction</a></li>
-          <br>
-          <br>
-          <li><a href="DOW.html">DOWC</a></li>
-          <br>
-          <br>
-          <li><a href="srilankananimals.html">Sri Lankan Animals</a></li>
-          <br>
-          <br>
-          <li><a href="yala.html">YALA park</a></li>
-          <br>
-          <br>
-          <li><a href="wilpaththu.html">Wilpaththu park</a></li>
-          <br>
-          <br>
-          <li><a href="gallery.html">Animal Gallery</a></li>
-          <br>
-          <br>
-          <li><a href="srilankanleapard.html">Sri Lankan Leopard</a></li>
-          <br>
-          <br>
-          <li><a href="contactus.html">Contact us</a></li>
-        </ul>
-      </section>
-    
-    <section class="footer-section">
-        <h7>Contact Us:</h7>
-        <h7>Email: Ceylonwildlife@gmail.com</h7>
-        <h7>Phone: 077 123 4567</h7>
-    </section>
-
-    
-</footer>
+    </script>
 
 
 
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="./script.js"></script>
 
 </body>
 </html>
