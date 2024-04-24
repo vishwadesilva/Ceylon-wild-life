@@ -54,13 +54,13 @@
             const username = signInForm.querySelector('#username').value;
             const password = signInForm.querySelector('#password').value;
 
-            // Check if the entered credentials match the admin's credentials
+
             if (username === "vishwaadmin" && password === "dieaking") {
-                // Redirect admin to newslettersave.html
+
                 window.location.href = 'newslettersave.html';
                 alert(' Admin has Logged in successful!');
             } else {
-                // Hardcoded user data
+
                 const hardcodedUsers = [
                     {
                         "username": "admin",
@@ -76,15 +76,13 @@
                     }
                 ];
 
-                // Get users from local storage
-                const localStorageUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-                // Combine hardcoded users and local storage users
+                const localStorageUsers = JSON.parse(localStorage.getItem('users')) || [];
                 const allUsers = [...hardcodedUsers, ...localStorageUsers];
 
                 const user = allUsers.find(u => u.username === username && u.password === password);
                 if (user) {
-                    // Store user details in localStorage
+
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     alert('Login successful!');
                     window.location.href = 'index.html';
