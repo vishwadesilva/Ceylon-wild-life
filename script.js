@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Get users from local storage
       const localStorageUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-      // Hardcoded user data
+
       const hardcodedUsers = [
           {
               "username": "admin",
@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       ];
 
-      // Combine hardcoded users and local storage users
+
       const allUsers = [...localStorageUsers, ...hardcodedUsers];
 
       const user = allUsers.find(u => u.username === username && u.password === password);
       if (user) {
-          // Store user details in localStorage
+
           localStorage.setItem('currentUser', JSON.stringify(user));
           alert('Login successful!');
           window.location.href = 'index.html';
@@ -46,17 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const email = signUpForm.querySelector('#email').value;
       const newpassword = signUpForm.querySelector('#newpassword').value;
 
-      // Get existing users or initialize empty array
+
       const users = JSON.parse(localStorage.getItem('users')) || [];
 
-      // Check if the username or email already exists
+
       const existingUser = users.find(u => u.username === newusername || u.email === email);
       if (existingUser) {
           alert('Username or email already exists');
           return;
       }
 
-      // Add the new user to the array
+
       const newUser = {
           fullname,
           username: newusername,
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       users.push(newUser);
 
-      // Store updated user data in localStorage
+
       localStorage.setItem('users', JSON.stringify(users));
 
       alert('Registration successful!');
-      // Clear the form fields
+
       signUpForm.reset();
   });
 });
@@ -87,22 +87,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Checking if the entered email and password match the specific credentials
+
 if (
   enteredname === "vishwaadmin" && 
   enteredPassword === "dieaking"
 ) {
-  // Redirect to the newsletter subscriptions page upon successful login
+
   window.location.href = "newsletter_subscriptions.html";
 } else if (
   storedUserData &&
   storedUserData.name === enteredname &&
   storedUserData.password === enteredPassword
 ) {
-  // Redirect to the index page if the stored credentials match the entered credentials
+
   window.location.href = "index.html";
 } else {
-  // Alert for invalid email or password
+
   alert("Invalid email or password. Please try again.");
 }
 signInForm.reset();
@@ -121,10 +121,10 @@ function newsletterForm() {
       subscriptions.push(subscription);
       localStorage.setItem('subscriptions', JSON.stringify(subscriptions));
 
-      // To clear the form fields after submission
+
       this.email = '';
 
-      alert('Subscription successful!'); // You can replace this with any UI feedback you want
+      alert('Subscription successful!'); 
     }
   };
 }
