@@ -111,18 +111,18 @@ signInForm.reset();
 
 function newsletterForm() {
   return {
-    email: '',
+    Name: '',
     subscribe() {
       // Saves subscriptions to the localStorage
       const subscription = {
-        email: this.email
+        Name: this.email
       };
       const subscriptions = JSON.parse(localStorage.getItem('subscriptions')) || [];
       subscriptions.push(subscription);
       localStorage.setItem('subscriptions', JSON.stringify(subscriptions));
 
 
-      this.email = '';
+      this.Name = '';
 
       alert('Subscription successful!'); 
     }
